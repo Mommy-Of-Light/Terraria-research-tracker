@@ -1,0 +1,102 @@
+[
+    {
+        "internalName": "IronPickaxe",
+        "id": 1,
+        "neededForResearch": 1,
+        "name": "Iron Pickaxe",
+        "url": "https://terraria.wiki.gg/images/5/5b/Iron_Pickaxe.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Iron_Pickaxe.png"
+    },
+    {
+        "internalName": "DirtBlock",
+        "id": 2,
+        "neededForResearch": 100,
+        "name": "Dirt Block",
+        "url": "https://terraria.wiki.gg/images/5/5b/Dirt_Block.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Dirt_Block.png"
+    },
+    {
+        "internalName": "StoneBlock",
+        "id": 3,
+        "neededForResearch": 100,
+        "name": "Stone Block",
+        "url": "https://terraria.wiki.gg/images/5/5b/Stone_Block.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Stone_Block.png"
+    },
+    {
+        "internalName": "IronBroadsword",
+        "id": 4,
+        "neededForResearch": 1,
+        "name": "Iron Broadsword",
+        "url": "https://terraria.wiki.gg/images/5/5b/Iron_Broadsword.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Iron_Broadsword.png"
+    },
+    {
+        "internalName": "Mushroom",
+        "id": 5,
+        "neededForResearch": 30,
+        "name": "Mushroom",
+        "url": "https://terraria.wiki.gg/images/5/5b/Mushroom.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Mushroom.png"
+    },
+    {
+        "internalName": "IronShortsword",
+        "id": 6,
+        "neededForResearch": 1,
+        "name": "Iron Shortsword",
+        "url": "https://terraria.wiki.gg/images/5/5b/Iron_Shortsword.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Iron_Shortsword.png"
+    },
+    {
+        "internalName": "IronHammer",
+        "id": 7,
+        "neededForResearch": 1,
+        "name": "Iron Hammer",
+        "url": "https://terraria.wiki.gg/images/5/5b/Iron_Hammer.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Iron_Hammer.png"
+    },
+    {
+        "internalName": "Torch",
+        "id": 8,
+        "neededForResearch": 100,
+        "name": "Torch",
+        "url": "https://terraria.wiki.gg/images/5/5b/Torch.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Torch.png"
+    },
+    {
+        "internalName": "Wood",
+        "id": 9,
+        "neededForResearch": 100,
+        "name": "Wood",
+        "url": "https://terraria.wiki.gg/images/5/5b/Wood.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Wood.png"
+    },
+    {
+        "internalName": "IronAxe",
+        "id": 10,
+        "neededForResearch": 1,
+        "name": "Iron Axe",
+        "url": "https://terraria.wiki.gg/images/5/5b/Iron_Axe.png",
+        "category": "Misc",
+        "subcategory": "General",
+        "localPath": "img/Misc/General/Iron_Axe.png"
+    }
+]

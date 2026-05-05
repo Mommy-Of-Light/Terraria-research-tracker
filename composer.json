@@ -1,0 +1,29 @@
+{
+    "name": "bastien/terraria-wiki-community",
+    "description": "AWEB personal project on a game wiki",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bastien\\TerrariaWikiCommunity\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bastien Jcln",
+            "email": "bastien.jcln@eduge.ch"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "^4.0",
+        "slim/psr7": "^1.8",
+        "slim/php-view": "^3.4"
+    },
+    "scripts": {
+        "launch-server": "fuser -k 8081/tcp 2>/dev/null || true && php -S localhost:8081 -d display_errors=1 -d display_startup_errors=1 -t public"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}

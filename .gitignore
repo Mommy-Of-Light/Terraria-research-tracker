@@ -1,0 +1,24 @@
+# .gitignore for a php slim composer project
+# Ignore vendor directory
+/vendor/
+# Ignore node_modules if using npm for frontend assets
+/node_modules/
+# Ignore environment configuration files
+.env
+# Ignore logs and cache
+/logs/
+/cache/
+# Ignore IDE specific files
+/.idea/
+/.vscode/
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore images and other assets if they are generated or not needed in version control
+/public/img/
+/public/icons/
+
+/config/database.php
+
+/public/users

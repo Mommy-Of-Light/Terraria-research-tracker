@@ -1,0 +1,1299 @@
+{
+    "current_index": 73,
+    "category_tree": {
+        "tool": {
+            "pickaxe": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Iron Pickaxe"
+                    ]
+                }
+            },
+            "hammer": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Iron Hammer"
+                    ]
+                }
+            },
+            "axe": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Iron Axe",
+                        "War Axe of the Night"
+                    ]
+                }
+            },
+            "misc": {
+                "material": {
+                    "_items": [
+                        "Magic Mirror"
+                    ]
+                }
+            }
+        },
+        "block": {
+            "filling": {
+                "material": {
+                    "_items": [
+                        "Dirt Block",
+                        "Stone Block",
+                        "Wood",
+                        "Ebonstone Block"
+                    ]
+                }
+            }
+        },
+        "weapon": {
+            "melee": {
+                "broadsword": {
+                    "pre-hardmode": {
+                        "_items": [
+                            "Iron Broadsword",
+                            "Wooden Sword"
+                        ],
+                        "material": {
+                            "_items": [
+                                "Light's Bane",
+                                "Starfury"
+                            ]
+                        }
+                    }
+                },
+                "shortsword": {
+                    "pre-hardmode": {
+                        "_items": [
+                            "Iron Shortsword"
+                        ]
+                    }
+                },
+                "boomerang": {
+                    "pre-hardmode": {
+                        "material": {
+                            "_items": [
+                                "Enchanted Boomerang"
+                            ]
+                        }
+                    }
+                }
+            },
+            "range": {
+                "bow": {
+                    "pre-hardmode": {
+                        "_items": [
+                            "Wooden Bow",
+                            "Demon Bow"
+                        ]
+                    }
+                },
+                "consumable": {
+                    "_items": [
+                        "Shuriken"
+                    ]
+                }
+            },
+            "magic": {
+                "wand": {
+                    "pre-hardmode": {
+                        "_items": [
+                            "Vilethorn"
+                        ]
+                    }
+                }
+            },
+            "summon": {},
+            "misc": {}
+        },
+        "potion": {
+            "healing": {
+                "material": {
+                    "_items": [
+                        "Mushroom",
+                        "Lesser Healing Potion"
+                    ]
+                }
+            }
+        },
+        "furniture": {
+            "light-source": {
+                "torch": {
+                    "_items": [
+                        "Torch"
+                    ]
+                }
+            },
+            "mechanism": {
+                "door": {
+                    "_items": [
+                        "Wooden Door"
+                    ]
+                }
+            },
+            "crafting-station": {
+                "material": {
+                    "_items": [
+                        "Bottle"
+                    ]
+                },
+                "_items": [
+                    "Furnace",
+                    "Iron Anvil",
+                    "Work Bench"
+                ]
+            },
+            "table": {
+                "_items": [
+                    "Wooden Table"
+                ]
+            },
+            "chair": {
+                "_items": [
+                    "Wooden Chair"
+                ]
+            },
+            "storage": {
+                "chest": {
+                    "material": {
+                        "_items": [
+                            "Chest"
+                        ]
+                    }
+                }
+            },
+            "statue": {
+                "spawn": {
+                    "enemy": {},
+                    "critter": {}
+                },
+                "other": {
+                    "tp-npc": {},
+                    "drop-item": {},
+                    "other-effect": {
+                        "_items": [
+                            "Angel Statue"
+                        ]
+                    }
+                },
+                "decorative": {},
+                "text": {}
+            },
+            "misc": {
+                "_items": [
+                    "Sunflower"
+                ]
+            }
+        },
+        "ore": {
+            "material": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Iron Ore",
+                        "Copper Ore",
+                        "Gold Ore",
+                        "Silver Ore",
+                        "Demonite Ore"
+                    ]
+                }
+            }
+        },
+        "accessory": {
+            "information": {
+                "time": {
+                    "_items": [
+                        "Copper Watch",
+                        "Silver Watch",
+                        "Gold Watch"
+                    ]
+                },
+                "depth": {
+                    "_items": [
+                        "Depth Meter"
+                    ]
+                }
+            },
+            "regeneration": {
+                "material": {
+                    "_items": [
+                        "Band of Regeneration"
+                    ]
+                }
+            },
+            "movement": {
+                "jump": {
+                    "double-jump": {
+                        "material": {
+                            "_items": [
+                                "Cloud in a Bottle"
+                            ]
+                        }
+                    }
+                },
+                "run": {
+                    "boot": {
+                        "material": {
+                            "_items": [
+                                "Hermes Boots"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "bar": {
+            "material": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Gold Bar",
+                        "Copper Bar",
+                        "Silver Bar",
+                        "Iron Bar",
+                        "Demonite Bar"
+                    ]
+                }
+            }
+        },
+        "ammunition": {
+            "material": {
+                "_items": [
+                    "Gel"
+                ]
+            },
+            "arrow": {
+                "material": {
+                    "_items": [
+                        "Wooden Arrow"
+                    ]
+                },
+                "_items": [
+                    "Flaming Arrow",
+                    "Unholy Arrow",
+                    "Jester's Arrow"
+                ]
+            },
+            "money": {
+                "material": {
+                    "_items": [
+                        "Copper Coin",
+                        "Silver Coin",
+                        "Gold Coin",
+                        "Platinum Coin"
+                    ]
+                }
+            }
+        },
+        "wall": {
+            "material": {
+                "_items": [
+                    "Stone Wall",
+                    "Dirt Wall"
+                ]
+            }
+        },
+        "seed": {
+            "ammunition": {
+                "material": {
+                    "_items": [
+                        "Acorn"
+                    ]
+                }
+            },
+            "material": {
+                "_items": [
+                    "Corrupt Seeds",
+                    "Grass Seeds"
+                ]
+            }
+        },
+        "perma-boost": {
+            "_items": [
+                "Life Crystal"
+            ]
+        },
+        "armor": {
+            "head": {
+                "_items": [
+                    "Goggles"
+                ]
+            },
+            "chest": {},
+            "leg": {}
+        },
+        "material": {
+            "drop": {
+                "enemy": {
+                    "_items": [
+                        "Lens",
+                        "Rotten Chunk",
+                        "Worm Tooth"
+                    ]
+                }
+            },
+            "_items": [
+                "Vile Mushroom"
+            ]
+        },
+        "boss-summon": {
+            "_items": [
+                "Suspicious Looking Eye",
+                "Worm Food"
+            ]
+        },
+        "misc": {
+            "powder": {
+                "_items": [
+                    "Purification Powder"
+                ],
+                "material": {
+                    "_items": [
+                        "Vile Powder"
+                    ]
+                }
+            }
+        }
+    },
+    "items_data": [
+        {
+            "internalName": "IronPickaxe",
+            "id": 1,
+            "neededForResearch": 1,
+            "name": "Iron Pickaxe",
+            "categories": [
+                "tool",
+                "pickaxe",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Pickaxe.png",
+            "localPath": null
+        },
+        {
+            "internalName": "DirtBlock",
+            "id": 2,
+            "neededForResearch": 100,
+            "name": "Dirt Block",
+            "categories": [
+                "block",
+                "filling",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Dirt_Block.png",
+            "localPath": null
+        },
+        {
+            "internalName": "StoneBlock",
+            "id": 3,
+            "neededForResearch": 100,
+            "name": "Stone Block",
+            "categories": [
+                "block",
+                "filling",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Stone_Block.png",
+            "localPath": null
+        },
+        {
+            "internalName": "IronBroadsword",
+            "id": 4,
+            "neededForResearch": 1,
+            "name": "Iron Broadsword",
+            "categories": [
+                "weapon",
+                "melee",
+                "broadsword",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Broadsword.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Mushroom",
+            "id": 5,
+            "neededForResearch": 30,
+            "name": "Mushroom",
+            "categories": [
+                "potion",
+                "healing",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Mushroom.png",
+            "localPath": null
+        },
+        {
+            "internalName": "IronShortsword",
+            "id": 6,
+            "neededForResearch": 1,
+            "name": "Iron Shortsword",
+            "categories": [
+                "weapon",
+                "melee",
+                "shortsword",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Shortsword.png",
+            "localPath": null
+        },
+        {
+            "internalName": "IronHammer",
+            "id": 7,
+            "neededForResearch": 1,
+            "name": "Iron Hammer",
+            "categories": [
+                "tool",
+                "hammer",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Hammer.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Torch",
+            "id": 8,
+            "neededForResearch": 100,
+            "name": "Torch",
+            "categories": [
+                "furniture",
+                "light-source",
+                "torch"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Torch.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Wood",
+            "id": 9,
+            "neededForResearch": 100,
+            "name": "Wood",
+            "categories": [
+                "block",
+                "filling",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Wood.png",
+            "localPath": null
+        },
+        {
+            "internalName": "IronAxe",
+            "id": 10,
+            "neededForResearch": 1,
+            "name": "Iron Axe",
+            "categories": [
+                "tool",
+                "axe",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Axe.png",
+            "localPath": null
+        },
+        {
+            "internalName": "IronOre",
+            "id": 11,
+            "neededForResearch": 100,
+            "name": "Iron Ore",
+            "categories": [
+                "ore",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Ore.png",
+            "localPath": null
+        },
+        {
+            "internalName": "CopperOre",
+            "id": 12,
+            "neededForResearch": 100,
+            "name": "Copper Ore",
+            "categories": [
+                "ore",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Copper_Ore.png",
+            "localPath": null
+        },
+        {
+            "internalName": "GoldOre",
+            "id": 13,
+            "neededForResearch": 100,
+            "name": "Gold Ore",
+            "categories": [
+                "ore",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Gold_Ore.png",
+            "localPath": null
+        },
+        {
+            "internalName": "SilverOre",
+            "id": 14,
+            "neededForResearch": 100,
+            "name": "Silver Ore",
+            "categories": [
+                "ore",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Silver_Ore.png",
+            "localPath": null
+        },
+        {
+            "internalName": "CopperWatch",
+            "id": 15,
+            "neededForResearch": 1,
+            "name": "Copper Watch",
+            "categories": [
+                "accessory",
+                "information",
+                "time"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Copper_Watch.png",
+            "localPath": null
+        },
+        {
+            "internalName": "SilverWatch",
+            "id": 16,
+            "neededForResearch": 1,
+            "name": "Silver Watch",
+            "categories": [
+                "accessory",
+                "information",
+                "time"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Silver_Watch.png",
+            "localPath": null
+        },
+        {
+            "internalName": "GoldWatch",
+            "id": 17,
+            "neededForResearch": 1,
+            "name": "Gold Watch",
+            "categories": [
+                "accessory",
+                "information",
+                "time"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Gold_Watch.png",
+            "localPath": null
+        },
+        {
+            "internalName": "DepthMeter",
+            "id": 18,
+            "neededForResearch": 1,
+            "name": "Depth Meter",
+            "categories": [
+                "accessory",
+                "information",
+                "depth"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Depth_Meter.png",
+            "localPath": null
+        },
+        {
+            "internalName": "GoldBar",
+            "id": 19,
+            "neededForResearch": 25,
+            "name": "Gold Bar",
+            "categories": [
+                "bar",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Gold_Bar.png",
+            "localPath": null
+        },
+        {
+            "internalName": "CopperBar",
+            "id": 20,
+            "neededForResearch": 25,
+            "name": "Copper Bar",
+            "categories": [
+                "bar",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Copper_Bar.png",
+            "localPath": null
+        },
+        {
+            "internalName": "SilverBar",
+            "id": 21,
+            "neededForResearch": 25,
+            "name": "Silver Bar",
+            "categories": [
+                "bar",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Silver_Bar.png",
+            "localPath": null
+        },
+        {
+            "internalName": "IronBar",
+            "id": 22,
+            "neededForResearch": 25,
+            "name": "Iron Bar",
+            "categories": [
+                "bar",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Bar.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Gel",
+            "id": 23,
+            "neededForResearch": 99,
+            "name": "Gel",
+            "categories": [
+                "ammunition",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Gel.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WoodenSword",
+            "id": 24,
+            "neededForResearch": 1,
+            "name": "Wooden Sword",
+            "categories": [
+                "weapon",
+                "melee",
+                "broadsword",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Wooden_Sword.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WoodenDoor",
+            "id": 25,
+            "neededForResearch": 1,
+            "name": "Wooden Door",
+            "categories": [
+                "furniture",
+                "mechanism",
+                "door"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Wooden_Door.png",
+            "localPath": null
+        },
+        {
+            "internalName": "StoneWall",
+            "id": 26,
+            "neededForResearch": 400,
+            "name": "Stone Wall",
+            "categories": [
+                "wall",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Stone_Wall.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Acorn",
+            "id": 27,
+            "neededForResearch": 50,
+            "name": "Acorn",
+            "categories": [
+                "seed",
+                "ammunition",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Acorn.png",
+            "localPath": null
+        },
+        {
+            "internalName": "LesserHealingPotion",
+            "id": 28,
+            "neededForResearch": 30,
+            "name": "Lesser Healing Potion",
+            "categories": [
+                "potion",
+                "healing",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Lesser_Healing_Potion.png",
+            "localPath": null
+        },
+        {
+            "internalName": "LifeCrystal",
+            "id": 29,
+            "neededForResearch": 10,
+            "name": "Life Crystal",
+            "categories": [
+                "perma-boost"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Life_Crystal.png",
+            "localPath": null
+        },
+        {
+            "internalName": "DirtWall",
+            "id": 30,
+            "neededForResearch": 400,
+            "name": "Dirt Wall",
+            "categories": [
+                "wall",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Dirt_Wall.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Bottle",
+            "id": 31,
+            "neededForResearch": 25,
+            "name": "Bottle",
+            "categories": [
+                "furniture",
+                "crafting-station",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Bottle.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WoodenTable",
+            "id": 32,
+            "neededForResearch": 1,
+            "name": "Wooden Table",
+            "categories": [
+                "furniture",
+                "table"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Wooden_Table.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Furnace",
+            "id": 33,
+            "neededForResearch": 1,
+            "name": "Furnace",
+            "categories": [
+                "furniture",
+                "crafting-station"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Furnace.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WoodenChair",
+            "id": 34,
+            "neededForResearch": 1,
+            "name": "Wooden Chair",
+            "categories": [
+                "furniture",
+                "chair"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Wooden_Chair.png",
+            "localPath": null
+        },
+        {
+            "internalName": "IronAnvil",
+            "id": 35,
+            "neededForResearch": 1,
+            "name": "Iron Anvil",
+            "categories": [
+                "furniture",
+                "crafting-station"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Iron_Anvil.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WorkBench",
+            "id": 36,
+            "neededForResearch": 1,
+            "name": "Work Bench",
+            "categories": [
+                "furniture",
+                "crafting-station"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Work_Bench.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Goggles",
+            "id": 37,
+            "neededForResearch": 1,
+            "name": "Goggles",
+            "categories": [
+                "armor",
+                "head"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Goggles.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Lens",
+            "id": 38,
+            "neededForResearch": 25,
+            "name": "Lens",
+            "categories": [
+                "material",
+                "drop",
+                "enemy"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Lens.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WoodenBow",
+            "id": 39,
+            "neededForResearch": 1,
+            "name": "Wooden Bow",
+            "categories": [
+                "weapon",
+                "range",
+                "bow",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Wooden_Bow.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WoodenArrow",
+            "id": 40,
+            "neededForResearch": 99,
+            "name": "Wooden Arrow",
+            "categories": [
+                "ammunition",
+                "arrow",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Wooden_Arrow.png",
+            "localPath": null
+        },
+        {
+            "internalName": "FlamingArrow",
+            "id": 41,
+            "neededForResearch": 99,
+            "name": "Flaming Arrow",
+            "categories": [
+                "ammunition",
+                "arrow"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Flaming_Arrow.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Shuriken",
+            "id": 42,
+            "neededForResearch": 99,
+            "name": "Shuriken",
+            "categories": [
+                "weapon",
+                "range",
+                "consumable"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Shuriken.png",
+            "localPath": null
+        },
+        {
+            "internalName": "SuspiciousLookingEye",
+            "id": 43,
+            "neededForResearch": 3,
+            "name": "Suspicious Looking Eye",
+            "categories": [
+                "boss-summon"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Suspicious_Looking_Eye.png",
+            "localPath": null
+        },
+        {
+            "internalName": "DemonBow",
+            "id": 44,
+            "neededForResearch": 1,
+            "name": "Demon Bow",
+            "categories": [
+                "weapon",
+                "range",
+                "bow",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Demon_Bow.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WarAxeoftheNight",
+            "id": 45,
+            "neededForResearch": 1,
+            "name": "War Axe of the Night",
+            "categories": [
+                "tool",
+                "axe",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/War_Axe_of_the_Night.png",
+            "localPath": null
+        },
+        {
+            "internalName": "LightsBane",
+            "id": 46,
+            "neededForResearch": 1,
+            "name": "Light's Bane",
+            "categories": [
+                "weapon",
+                "melee",
+                "broadsword",
+                "pre-hardmode",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Light%27s_Bane.png",
+            "localPath": null
+        },
+        {
+            "internalName": "UnholyArrow",
+            "id": 47,
+            "neededForResearch": 99,
+            "name": "Unholy Arrow",
+            "categories": [
+                "ammunition",
+                "arrow"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Unholy_Arrow.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Chest",
+            "id": 48,
+            "neededForResearch": 1,
+            "name": "Chest",
+            "categories": [
+                "furniture",
+                "storage",
+                "chest",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Chest.png",
+            "localPath": null
+        },
+        {
+            "internalName": "BandofRegeneration",
+            "id": 49,
+            "neededForResearch": 1,
+            "name": "Band of Regeneration",
+            "categories": [
+                "accessory",
+                "regeneration",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Band_of_Regeneration.png",
+            "localPath": null
+        },
+        {
+            "internalName": "MagicMirror",
+            "id": 50,
+            "neededForResearch": 1,
+            "name": "Magic Mirror",
+            "categories": [
+                "tool",
+                "misc",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Magic_Mirror.png",
+            "localPath": null
+        },
+        {
+            "internalName": "JestersArrow",
+            "id": 51,
+            "neededForResearch": 99,
+            "name": "Jester's Arrow",
+            "categories": [
+                "ammunition",
+                "arrow"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Jester%27s_Arrow.png",
+            "localPath": null
+        },
+        {
+            "internalName": "AngelStatue",
+            "id": 52,
+            "neededForResearch": 1,
+            "name": "Angel Statue",
+            "categories": [
+                "furniture",
+                "statue",
+                "other",
+                "other-effect"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Angel_Statue.png",
+            "localPath": null
+        },
+        {
+            "internalName": "CloudinaBottle",
+            "id": 53,
+            "neededForResearch": 1,
+            "name": "Cloud in a Bottle",
+            "categories": [
+                "accessory",
+                "movement",
+                "jump",
+                "double-jump",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Cloud_in_a_Bottle.png",
+            "localPath": null
+        },
+        {
+            "internalName": "HermesBoots",
+            "id": 54,
+            "neededForResearch": 1,
+            "name": "Hermes Boots",
+            "categories": [
+                "accessory",
+                "movement",
+                "run",
+                "boot",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Hermes_Boots.png",
+            "localPath": null
+        },
+        {
+            "internalName": "EnchantedBoomerang",
+            "id": 55,
+            "neededForResearch": 1,
+            "name": "Enchanted Boomerang",
+            "categories": [
+                "weapon",
+                "melee",
+                "boomerang",
+                "pre-hardmode",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Enchanted_Boomerang.png",
+            "localPath": null
+        },
+        {
+            "internalName": "DemoniteOre",
+            "id": 56,
+            "neededForResearch": 100,
+            "name": "Demonite Ore",
+            "categories": [
+                "ore",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Demonite_Ore.png",
+            "localPath": null
+        },
+        {
+            "internalName": "DemoniteBar",
+            "id": 57,
+            "neededForResearch": 25,
+            "name": "Demonite Bar",
+            "categories": [
+                "bar",
+                "material",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Demonite_Bar.png",
+            "localPath": null
+        },
+        {
+            "internalName": "CorruptSeeds",
+            "id": 59,
+            "neededForResearch": 25,
+            "name": "Corrupt Seeds",
+            "categories": [
+                "seed",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Corrupt_Seeds.png",
+            "localPath": null
+        },
+        {
+            "internalName": "VileMushroom",
+            "id": 60,
+            "neededForResearch": 25,
+            "name": "Vile Mushroom",
+            "categories": [
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Vile_Mushroom.png",
+            "localPath": null
+        },
+        {
+            "internalName": "EbonstoneBlock",
+            "id": 61,
+            "neededForResearch": 100,
+            "name": "Ebonstone Block",
+            "categories": [
+                "block",
+                "filling",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Ebonstone_Block.png",
+            "localPath": null
+        },
+        {
+            "internalName": "GrassSeeds",
+            "id": 62,
+            "neededForResearch": 25,
+            "name": "Grass Seeds",
+            "categories": [
+                "seed",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Grass_Seeds.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Sunflower",
+            "id": 63,
+            "neededForResearch": 5,
+            "name": "Sunflower",
+            "categories": [
+                "furniture",
+                "misc"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Sunflower.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Vilethorn",
+            "id": 64,
+            "neededForResearch": 1,
+            "name": "Vilethorn",
+            "categories": [
+                "weapon",
+                "magic",
+                "wand",
+                "pre-hardmode"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Vilethorn.png",
+            "localPath": null
+        },
+        {
+            "internalName": "Starfury",
+            "id": 65,
+            "neededForResearch": 1,
+            "name": "Starfury",
+            "categories": [
+                "weapon",
+                "melee",
+                "broadsword",
+                "pre-hardmode",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Starfury.png",
+            "localPath": null
+        },
+        {
+            "internalName": "PurificationPowder",
+            "id": 66,
+            "neededForResearch": 99,
+            "name": "Purification Powder",
+            "categories": [
+                "misc",
+                "powder"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Purification_Powder.png",
+            "localPath": null
+        },
+        {
+            "internalName": "VilePowder",
+            "id": 67,
+            "neededForResearch": 99,
+            "name": "Vile Powder",
+            "categories": [
+                "misc",
+                "powder",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Vile_Powder.png",
+            "localPath": null
+        },
+        {
+            "internalName": "RottenChunk",
+            "id": 68,
+            "neededForResearch": 25,
+            "name": "Rotten Chunk",
+            "categories": [
+                "material",
+                "drop",
+                "enemy"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Rotten_Chunk.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WormTooth",
+            "id": 69,
+            "neededForResearch": 25,
+            "name": "Worm Tooth",
+            "categories": [
+                "material",
+                "drop",
+                "enemy"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Worm_Tooth.png",
+            "localPath": null
+        },
+        {
+            "internalName": "WormFood",
+            "id": 70,
+            "neededForResearch": 3,
+            "name": "Worm Food",
+            "categories": [
+                "boss-summon"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Worm_Food.png",
+            "localPath": null
+        },
+        {
+            "internalName": "CopperCoin",
+            "id": 71,
+            "neededForResearch": 100,
+            "name": "Copper Coin",
+            "categories": [
+                "ammunition",
+                "money",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Copper_Coin.png",
+            "localPath": null
+        },
+        {
+            "internalName": "SilverCoin",
+            "id": 72,
+            "neededForResearch": 100,
+            "name": "Silver Coin",
+            "categories": [
+                "ammunition",
+                "money",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Silver_Coin.png",
+            "localPath": null
+        },
+        {
+            "internalName": "GoldCoin",
+            "id": 73,
+            "neededForResearch": 100,
+            "name": "Gold Coin",
+            "categories": [
+                "ammunition",
+                "money",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Gold_Coin.png",
+            "localPath": null
+        },
+        {
+            "internalName": "PlatinumCoin",
+            "id": 74,
+            "neededForResearch": 100,
+            "name": "Platinum Coin",
+            "categories": [
+                "ammunition",
+                "money",
+                "material"
+            ],
+            "url": "https://terraria.wiki.gg/images/5/5b/Platinum_Coin.png",
+            "localPath": null
+        }
+    ]
+}

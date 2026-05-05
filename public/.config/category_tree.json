@@ -1,0 +1,351 @@
+{
+    "tool": {
+        "pickaxe": {
+            "pre-hardmode": {
+                "_items": [
+                    "Iron Pickaxe"
+                ]
+            }
+        },
+        "hammer": {
+            "pre-hardmode": {
+                "_items": [
+                    "Iron Hammer"
+                ]
+            }
+        },
+        "axe": {
+            "pre-hardmode": {
+                "_items": [
+                    "Iron Axe",
+                    "War Axe of the Night"
+                ]
+            }
+        },
+        "misc": {
+            "material": {
+                "_items": [
+                    "Magic Mirror"
+                ]
+            }
+        }
+    },
+    "block": {
+        "filling": {
+            "material": {
+                "_items": [
+                    "Dirt Block",
+                    "Stone Block",
+                    "Wood",
+                    "Ebonstone Block"
+                ]
+            }
+        }
+    },
+    "weapon": {
+        "melee": {
+            "broadsword": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Iron Broadsword",
+                        "Wooden Sword"
+                    ],
+                    "material": {
+                        "_items": [
+                            "Light's Bane",
+                            "Starfury"
+                        ]
+                    }
+                }
+            },
+            "shortsword": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Iron Shortsword"
+                    ]
+                }
+            },
+            "boomerang": {
+                "pre-hardmode": {
+                    "material": {
+                        "_items": [
+                            "Enchanted Boomerang"
+                        ]
+                    }
+                }
+            }
+        },
+        "range": {
+            "bow": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Wooden Bow",
+                        "Demon Bow"
+                    ]
+                }
+            },
+            "consumable": {
+                "_items": [
+                    "Shuriken"
+                ]
+            }
+        },
+        "magic": {
+            "wand": {
+                "pre-hardmode": {
+                    "_items": [
+                        "Vilethorn"
+                    ]
+                }
+            }
+        },
+        "summon": {},
+        "misc": {}
+    },
+    "potion": {
+        "healing": {
+            "material": {
+                "_items": [
+                    "Mushroom",
+                    "Lesser Healing Potion"
+                ]
+            }
+        }
+    },
+    "furniture": {
+        "light-source": {
+            "torch": {
+                "_items": [
+                    "Torch"
+                ]
+            }
+        },
+        "mechanism": {
+            "door": {
+                "_items": [
+                    "Wooden Door"
+                ]
+            }
+        },
+        "crafting-station": {
+            "material": {
+                "_items": [
+                    "Bottle"
+                ]
+            },
+            "_items": [
+                "Furnace",
+                "Iron Anvil",
+                "Work Bench"
+            ]
+        },
+        "table": {
+            "_items": [
+                "Wooden Table"
+            ]
+        },
+        "chair": {
+            "_items": [
+                "Wooden Chair"
+            ]
+        },
+        "storage": {
+            "chest": {
+                "material": {
+                    "_items": [
+                        "Chest"
+                    ]
+                }
+            }
+        },
+        "statue": {
+            "spawn": {
+                "enemy": {},
+                "critter": {}
+            },
+            "other": {
+                "tp-npc": {},
+                "drop-item": {},
+                "other-effect": {
+                    "_items": [
+                        "Angel Statue"
+                    ]
+                }
+            },
+            "decorative": {},
+            "text": {}
+        },
+        "misc": {
+            "_items": [
+                "Sunflower"
+            ]
+        }
+    },
+    "ore": {
+        "material": {
+            "pre-hardmode": {
+                "_items": [
+                    "Iron Ore",
+                    "Copper Ore",
+                    "Gold Ore",
+                    "Silver Ore",
+                    "Demonite Ore"
+                ]
+            }
+        }
+    },
+    "accessory": {
+        "information": {
+            "time": {
+                "_items": [
+                    "Copper Watch",
+                    "Silver Watch",
+                    "Gold Watch"
+                ]
+            },
+            "depth": {
+                "_items": [
+                    "Depth Meter"
+                ]
+            }
+        },
+        "regeneration": {
+            "material": {
+                "_items": [
+                    "Band of Regeneration"
+                ]
+            }
+        },
+        "movement": {
+            "jump": {
+                "double-jump": {
+                    "material": {
+                        "_items": [
+                            "Cloud in a Bottle"
+                        ]
+                    }
+                }
+            },
+            "run": {
+                "boot": {
+                    "material": {
+                        "_items": [
+                            "Hermes Boots"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "bar": {
+        "material": {
+            "pre-hardmode": {
+                "_items": [
+                    "Gold Bar",
+                    "Copper Bar",
+                    "Silver Bar",
+                    "Iron Bar",
+                    "Demonite Bar"
+                ]
+            }
+        }
+    },
+    "ammunition": {
+        "material": {
+            "_items": [
+                "Gel"
+            ]
+        },
+        "arrow": {
+            "material": {
+                "_items": [
+                    "Wooden Arrow"
+                ]
+            },
+            "_items": [
+                "Flaming Arrow",
+                "Unholy Arrow",
+                "Jester's Arrow"
+            ]
+        },
+        "money": {
+            "material": {
+                "_items": [
+                    "Copper Coin",
+                    "Silver Coin",
+                    "Gold Coin",
+                    "Platinum Coin"
+                ]
+            }
+        }
+    },
+    "wall": {
+        "material": {
+            "_items": [
+                "Stone Wall",
+                "Dirt Wall"
+            ]
+        }
+    },
+    "seed": {
+        "ammunition": {
+            "material": {
+                "_items": [
+                    "Acorn"
+                ]
+            }
+        },
+        "material": {
+            "_items": [
+                "Corrupt Seeds",
+                "Grass Seeds"
+            ]
+        }
+    },
+    "perma-boost": {
+        "_items": [
+            "Life Crystal"
+        ]
+    },
+    "armor": {
+        "head": {
+            "_items": [
+                "Goggles"
+            ]
+        },
+        "chest": {},
+        "leg": {}
+    },
+    "material": {
+        "drop": {
+            "enemy": {
+                "_items": [
+                    "Lens",
+                    "Rotten Chunk",
+                    "Worm Tooth"
+                ]
+            }
+        },
+        "_items": [
+            "Vile Mushroom"
+        ]
+    },
+    "boss-summon": {
+        "_items": [
+            "Suspicious Looking Eye",
+            "Worm Food"
+        ]
+    },
+    "misc": {
+        "powder": {
+            "_items": [
+                "Purification Powder"
+            ],
+            "material": {
+                "_items": [
+                    "Vile Powder"
+                ]
+            }
+        }
+    }
+}

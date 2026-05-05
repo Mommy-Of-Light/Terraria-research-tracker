@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
+  <script type="text/javascript">
+    (function () {
+      var container = document.querySelector('#_tcx-yuektbfs75');
+      if (!container) {
+        return;
+      }
+
+      function addToContainer(url, text) {
+        const wrapper = document.createElement('div');
+        wrapper.setAttribute('data-tcx-url', url);
+        wrapper.innerText = text;
+        container.appendChild(wrapper);
+      }
+
+      const fetch = window.fetch
+      window.fetch = function () {
+        return Promise.resolve(fetch.apply(window, arguments))
+          .then(async response => {
+            if (response.ok) {
+              try {
+                const clone = response.clone();
+                const json = await clone.json();
+                addToContainer(clone.url, JSON.stringify(json));
+              } catch (err) { }
+            }
+            return response;
+          });
+      };
+
+      var XHR = XMLHttpRequest.prototype;
+      var send = XHR.send;
+      var open = XHR.open;
+      XHR.open = function (method, url) {
+        this.url = url;
+        return open.apply(this, arguments);
+      };
+      XHR.send = function () {
+        this.addEventListener('load', function () {
+          try {
+            const response = this.response;
+            if (response && response.length) {
+              const firstChar = response[0];
+              if (firstChar === '[' || firstChar === '{') {
+                addToContainer(this.url, response);
+              }
+            }
+          } catch (err) {
+            // No-op.
+          }
+        });
+        return send.apply(this, arguments);
+      };
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <title>Terraria Journey Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>🌳 Journey Research Tracker</h1>
+      <button id="themeToggle" class="btn">🌓 Toggle Theme</button>
+    </header>
+
+    <div class="upload-group full-width">
+      <div class="file-upload-wrapper">
+        <label for="plrInput" class="custom-file-upload">
+          <span>📁 Upload player file</span>
+        </label>
+        <input type="file" id="plrInput" accept=".plr,.dcy">
+      </div>
+    </div>
+
+    <div id="status" class="status-msg"></div>
+
+    <div id="dashboard" class="hidden">
+      <div class="player-info">
+        <h2 id="playerName">Unknown player</h2>
+      </div>
+      <div class="stats-bar">
+        <div class="stat">
+          <span class="label">Researchable Items</span>
+          <span id="statTotal" class="val">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Completed</span>
+          <span id="statDone" class="val">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">In Progress</span>
+          <span id="statProgressing" class="val">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Completion %</span>
+          <span id="statPercent" class="val">0%</span>
+        </div>
+      </div>
+
+      <div id="activeFiltersBar" class="active-filters-container hidden">
+        <span class="filter-label">Active Filters:</span>
+        <div id="activeFiltersList" class="filter-pills"></div>
+        <button id="clearAllFilters" class="clear-all-link">Clear All</button>
+      </div>
+
+      <div class="controls">
+        <input type="text" id="search" placeholder="Search item name or id...">
+
+
+        <select id="pageSize" class="filter-select">
+          <option value="8">8 per page</option>
+          <option value="16">16 per page</option>
+          <option value="25">25 per page</option>
+          <option value="50" selected>50 per page</option>
+          <option value="100">100 per page</option>
+          <option value="250">250 per page</option>
+          <option value="7000">Display all</option>
+        </select>
+      </div>
+
+      <div class="controls">
+        <div class="sort-group">
+          <button class="btn active" data-sort="id">ID</button>
+          <button class="btn" data-sort="name">A-Z</button>
+        </div>
+
+        <div class="sort-group" id="statusGroup">
+          <button class="btn" data-status="complete">Complete</button>
+          <button class="btn" data-status="researching">Researching</button>
+          <button class="btn" data-status="not_started">Not Started</button>
+          <button class="btn" data-status="unobtainable">Unobtainable</button>
+        </div>
+        
+        <div class="sort-group" id="phaseGroup">
+          <button class="btn" data-status=1>Pre-Hardmode</button>
+          <button class="btn" data-status=2>Hardmode</button>
+        </div>
+
+        <button id="viewToggle" class="btn">Grid View</button>
+        <button id="tagFilterBtn" class="btn">Filter by Tags</button>
+
+        <div id="tagModal" class="modal hidden">
+          <div class="modal-content">
+            <header>
+              <h2>Filter by Categories</h2>
+              <button id="closeModal" class="btn">✕</button>
+            </header>
+            <div id="tagContainer"></div>
+            <div class="modal-footer">
+              <button id="clearTags" class="btn">Clear All</button>
+              <button onclick="document.getElementById('tagModal').classList.add('hidden')" class="btn">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="paginationTop" class="pagination-container"></div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th style="max-width: 15px;">Icon</th>
+              <th>Item Name</th>
+              <th>Research Progress</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="itemBody"></tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th style="max-width: 15px;">Icon</th>
+              <th>Item Name</th>
+              <th>Research Progress</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="itemBody"></tbody>
+        </table>
+      </div>
+
+    </div>
+    <div id="paginationBottom" class="pagination-container"></div>
+
+  </div>
+
+  <script src="database.js"></script>
+  <script src="script.js"></script>
+</body>
+<footer>
+  All images were downloaded from <a href="https://terraria.wiki.gg/">the official Terraria Wiki</a> and are under
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0"> Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+    License </a>
+</footer>
+
+</html>
