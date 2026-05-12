@@ -18,12 +18,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `chat_V2`
+-- Base de données : `chat_V3`
 --
 
-DROP DATABASE IF EXISTS `chat_V2`;
-CREATE DATABASE `chat_V2`;
-USE `chat_V2`;
+DROP DATABASE IF EXISTS `chat_V3`;
+CREATE DATABASE `chat_V3`;
+USE `chat_V3`;
 
 -- --------------------------------------------------------
 

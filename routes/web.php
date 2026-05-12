@@ -4,6 +4,37 @@ use Bastien\TerrariaWikiCommunity\Controllers\ChatController;
 use Bastien\TerrariaWikiCommunity\Controllers\AuthController;
 use Bastien\TerrariaWikiCommunity\Controllers\UserController;
 
+// Serve static icons directly (workaround for container/Apache path issues)
+$app->get('/icons/{file:.+}', function ($request, $response, $args) {
+	$fileName = $args['file'];
+	$filePath = __DIR__ . '/../public/icons/' . $fileName;
+	if (!is_file($filePath) || !is_readable($filePath)) {
+		return $response->withStatus(404);
+	}
+	$mime = @mime_content_type($filePath) ?: 'application/octet-stream';
+	$body = file_get_contents($filePath);
+	$response->getBody()->write($body);
+	return $response->withHeader('Content-Type', $mime);
+});
+
+// Always-available assets route: serve icons via the Slim app under /assets/icons/
+// This avoids relying on Apache's file mapping and works even when DocumentRoot
+// mapping causes unexpected 404s.
+$app->get('/assets/icons/{file:.+}', function ($request, $response, $args) {
+	$fileName = $args['file'];
+	$filePath = __DIR__ . '/../public/icons/' . $fileName;
+	if (!is_file($filePath) || !is_readable($filePath)) {
+		return $response->withStatus(404);
+	}
+	$mime = @mime_content_type($filePath) ?: 'application/octet-stream';
+	$stream = fopen($filePath, 'rb');
+	if ($stream === false) return $response->withStatus(404);
+	$response = $response->withHeader('Content-Type', $mime);
+	$response->getBody()->write(stream_get_contents($stream));
+	fclose($stream);
+	return $response;
+});
+
 // Main entry point
 $app->get('/', [HomeController::class, 'index']);
 
