@@ -175,6 +175,17 @@ footer a {
     border-radius: 6px; 
     cursor: pointer; } */
 
+*::-webkit-scrollbar {
+	width: 8px;
+}
+*::-webkit-scrollbar-track {
+	background: #2c2f33;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #7289da;
+	border-radius: 4px;
+}
+
 .wiki-link {
     color: var(--link-color);
     text-decoration: none;

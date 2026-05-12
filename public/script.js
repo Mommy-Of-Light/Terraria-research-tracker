@@ -163,7 +163,7 @@ function loadDatabase() {
         internal: item.internalName,
         required: item.neededForResearch,
         wiki: "https://terraria.wiki.gg/wiki/" + item.itemUrl,
-        icon: "icons/" + item.imageUrl,
+  icon: "/assets/icons/" + item.imageUrl,
         tags: item.tags,
         unobtainable: item.isUnobtainable || false, // Capture the boolean flag
         hardmode: item.isHm || false,
@@ -502,13 +502,13 @@ function renderUI() {
           ? Math.min(100, (item.current / item.required) * 100)
           : 0;
 
-      const row = document.createElement("tr");
+   const row = document.createElement("tr");
 
       row.innerHTML = `
     <td style="opacity:0.5">${item.id}</td>
     <td>
-      <img src="${item.icon}" loading="lazy"
-           onerror="this.src='icons/Default.png';">
+   <img src="${item.icon}" loading="lazy"
+     onerror="this.src='/assets/icons/Default.png';">
     </td>
     <td>
       <a href="${item.wiki}" target="_blank" class="wiki-link">
@@ -567,7 +567,7 @@ function renderUI() {
         <div class="item-card ${statusClass} ${unobClass}">
             <spam>${item.id}</spam>
             <a href="${item.wiki}" target="_blank" class="wiki-link">
-                <img src="${item.icon}" onerror="this.src='icons/Default.png';">
+  <img src="${item.icon}" onerror="this.src='/assets/icons/Default.png';">
                 <div class="item-name">${item.display}</div>
             </a>
             <div class="mini-prog">${unobClass ? "Unobtainable" : item.current + "/" + item.required}</div>
@@ -690,7 +690,7 @@ function renderTagModal() {
     group.className = "tag-group";
     group.innerHTML = `
             <h3 class="tag-header" data-cat="${category}" style="cursor: pointer;">
-              <img class="img-cat" src="./icons/${category + ".png"}">
+              <img class="img-cat" src="/assets/icons/${category + ".png"}">
               <spam>${category}</spam>
               <span class="cat-pct">${catPercent}%</span>
             </h3>

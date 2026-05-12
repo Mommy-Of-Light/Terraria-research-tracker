@@ -4,8 +4,14 @@ date_default_timezone_set('Europe/Paris');
 use Slim\Factory\AppFactory;
 use Slim\Exception\HttpNotFoundException;
 use Slim\Views\PhpRenderer;
+use Dotenv\Dotenv;
 
 require __DIR__ . '/../vendor/autoload.php';
+
+define('ROOT_PATH', __DIR__ . '/../');
+
+$dotenv = Dotenv::createImmutable(ROOT_PATH);
+$dotenv->load();
 
 session_start();
 
@@ -14,28 +20,15 @@ $app = AppFactory::create();
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
 $errorMiddleware->setErrorHandler(
-    HttpNotFoundException::class,
+    Slim\Exception\HttpNotFoundException::class,
     function ($request, $exception, $displayErrorDetails) {
-        $response = new \Slim\Psr7\Response();
-        $view = new PhpRenderer(__DIR__ . '/../views');
-        $view->setLayout("layout.php");
+            $response = new \Slim\Psr7\Response();
+            // Correct views directory (was misspelled 'scr/Views')
+            $view = new PhpRenderer(ROOT_PATH . 'views/');
+            $view->setLayout("layout.php");
         return $view->render($response->withStatus(404), 'errors/404.php', [
-            'withMenu' => true,
-            'title' => 'Page non trouvée',
-            'message' => $exception->getMessage(),
-        ]);
-    }
-);
-
-$errorMiddleware->setErrorHandler(
-    Slim\Exception\HttpBadRequestException::class,
-    function ($request, $exception, $displayErrorDetails) {
-        $response = new \Slim\Psr7\Response();
-        $view = new PhpRenderer(__DIR__ . '/../views');
-        $view->setLayout("layout.php");
-        return $view->render($response->withStatus(400), 'errors/400.php', [
             'withMenu' => false,
-            'title' => 'Mauvaise requête',
+            'title' => 'Page non trouvée',
             'message' => $exception->getMessage(),
         ]);
     }
@@ -45,8 +38,22 @@ $errorMiddleware->setErrorHandler(
     Slim\Exception\HttpInternalServerErrorException::class,
     function ($request, $exception, $displayErrorDetails) {
         $response = new \Slim\Psr7\Response();
-        $view = new PhpRenderer(__DIR__ . '/../views');
-        $view->setLayout("layout.php");
+            $view = new PhpRenderer(ROOT_PATH . 'views/');
+            $view->setLayout("layout.php");
+        return $view->render($response->withStatus(500), 'errors/500.php', [
+            'withMenu' => false,
+            'title' => 'Erreur interne du serveur',
+            'message' => $exception->getMessage(),
+        ]);
+    }
+);
+
+$errorMiddleware->setErrorHandler(
+    Slim\Exception\HttpInternalServerErrorException::class,
+    function ($request, $exception, $displayErrorDetails) {
+        $response = new \Slim\Psr7\Response();
+            $view = new PhpRenderer(ROOT_PATH . 'views/');
+            $view->setLayout("layout.php");
         return $view->render($response->withStatus(500), 'errors/500.php', [
             'withMenu' => false,
             'title' => 'Erreur interne du serveur',
