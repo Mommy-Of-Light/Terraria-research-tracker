@@ -27,8 +27,8 @@ This project is ment do make easy to trace the progression of a `Journey Mode Pl
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/Mommy-Of-Light/Terraria-research-tracker.git
+cd Terraria-research-tracker
 ```
 
 or use the .zip file
@@ -46,7 +46,7 @@ This step is required to have all the necessary images for the application.
 
 ## Configuration
 
-### Put the database in `sql/chat_V2.sql` in your mariadb database server
+### Put the database in `sql/chat_V3.sql` in your mariadb database server
 
 ### Copy `database.sample.php` to `database.php` and update values:
 
@@ -74,13 +74,15 @@ Using PHP built-in server:
 composer launch-server
 ```
 
-**Skip this part because there isn't a docker munted for now**
+## Launch the docker for simple access
 
 Or with Docker (if applicable):
 
 ```bash
 docker-compose up -d
 ```
+
+**Access the website from the url:** `http://localhost:8080/`
 
 ---
 
