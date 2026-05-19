@@ -19,6 +19,5 @@ Thumbs.db
 /public/img/
 /public/icons/
 
-/config/database.php
-
 /public/users
+config/database.php
