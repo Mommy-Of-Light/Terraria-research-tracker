@@ -104,7 +104,7 @@
                 <input type="text" id="search" placeholder="Search item name or id..." style="padding: 4px 8px; font-size: 0.95em; height: 32px; min-width: 190px; max-width: 190px;">
                 <select id="pageSize" class="filter-select" style="padding: 4px 8px; font-size: 0.95em; height: 32px;">
                     <option value="8">8 per page</option>
-                    <option value="16">16 per page</option>
+                    <option value="16" selected>16 per page</option>
                     <option value="32">32 per page</option>
                     <option value="64">64 per page</option>
                     <option value="100">100 per page</option>
@@ -160,6 +160,7 @@
                             <th>Item Name</th>
                             <th>Research Progress</th>
                             <th>Status</th>
+                            <th>Check</th>
                         </tr>
                     </thead>
                     <tbody id="itemBody" class="item-list"></tbody>

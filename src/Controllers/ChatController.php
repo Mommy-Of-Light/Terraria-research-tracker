@@ -179,7 +179,7 @@ class ChatController extends BaseController
         }
 
         $stmt = Database::connection()->prepare("
-        DELETE FROM Chats WHERE idChat = :idChat
+        DELETE FROM Chat WHERE idChat = :idChat
     ");
         $stmt->execute([':idChat' => $chatId]);
 

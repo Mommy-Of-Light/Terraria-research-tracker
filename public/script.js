@@ -64,7 +64,7 @@ const ENCRYPTION_KEY_STR = "h3y_gUyZ";
 
 // Pagination & View Variables
 let CURRENT_PAGE = 1;
-let ITEMS_PER_PAGE = 50;
+let ITEMS_PER_PAGE = 16;
 let CURRENT_SORT = "id";
 let CURRENT_VIEW = "list";
 let MASTER_LIST = [];
@@ -87,8 +87,35 @@ const RESEARCH_DEPENDENCIES = {
 };
 
 // Saves all user preferences (view, tags, status, page size) to localStorage.
+let allItems = [];
+let allTags = {}; // changed from [] to {} to hold category->tags mapping
 
-document.addEventListener("DOMContentLoaded", () => {});
+async function loadItems() {
+  const response = await fetch('/items.json');
+  const items = await response.json();
+
+  allItems = Object.values(items);
+
+  loadDatabase();
+}
+
+async function loadTags() {
+  const response = await fetch('/tags.json');
+  const tags = await response.json();
+
+  allTags = {};
+  Object.values(tags).forEach((entry) => {
+    if (entry && entry.category && Array.isArray(entry.tags)) {
+      allTags[entry.category] = entry.tags;
+    }
+  });
+}
+
+loadItems();
+loadTags();
+
+document.addEventListener("DOMContentLoaded", () => {
+});
 
 function savePreferences() {
   const preferences = {
@@ -104,7 +131,6 @@ function savePreferences() {
   localStorage.setItem("terraria_user_prefs", JSON.stringify(preferences));
 }
 
-// Logic from TCryptor for reading plr file
 async function decryptPlayerFile(encryptedBuffer) {
   const keyBuf = new ArrayBuffer(ENCRYPTION_KEY_STR.length * 2);
   const keyView = new Uint16Array(keyBuf);
@@ -139,7 +165,7 @@ function loadPreferences() {
     CURRENT_VIEW = prefs.view || "list";
     ACTIVE_TAGS = prefs.tags || [];
     ACTIVE_STATUSES = prefs.statuses || [];
-    ITEMS_PER_PAGE = prefs.pageSize || 50;
+    ITEMS_PER_PAGE = prefs.pageSize === null ? 16 : prefs.pageSize;
     SHOW_UNOB = prefs.displayUnobtainable || false;
     SHOW_ALL_IDS = prefs.showAllIds || false;
     HARDMODE = prefs.hardmodeFilter || 0;
@@ -163,7 +189,7 @@ function loadDatabase() {
         internal: item.internalName,
         required: item.neededForResearch,
         wiki: "https://terraria.wiki.gg/wiki/" + item.itemUrl,
-  icon: "/assets/icons/" + item.imageUrl,
+        icon: "/assets/icons/" + item.imageUrl,
         tags: item.tags,
         unobtainable: item.isUnobtainable || false, // Capture the boolean flag
         hardmode: item.isHm || false,
@@ -217,6 +243,7 @@ function loadDatabase() {
       if (cachedName)
         document.getElementById("playerName").innerText = cachedName;
     }
+
     renderUI();
 
     document.getElementById("plrInput").disabled = false;
@@ -390,6 +417,16 @@ function renderUI() {
     );
   }
 
+  if (isNaN(ITEMS_PER_PAGE) || ITEMS_PER_PAGE <= 0) {
+    loadPreferences();
+  }
+
+  if (ITEMS_PER_PAGE >= allItems.length) {
+    document.getElementById("pageSize").value = "all";
+  } else {
+    document.getElementById("pageSize").value = ITEMS_PER_PAGE;
+  }
+
   let displayList = MASTER_LIST.filter((item) => {
     const searchTerm = document.getElementById("search").value.toLowerCase();
     const matchesSearch =
@@ -501,7 +538,7 @@ function renderUI() {
           ? Math.min(100, (item.current / item.required) * 100)
           : 0;
 
-   const row = document.createElement("tr");
+      const row = document.createElement("tr");
 
       row.innerHTML = `
     <td style="opacity:0.5">${item.id}</td>
@@ -520,18 +557,19 @@ function renderUI() {
       </div>
       ${unobClass ? "" : item.current + "/" + item.required}
     </td>
-    <td class="${
-      unobClass ? "unob" : isDone ? "done" : item.current === 0 ? "none" : "mid"
-    }">
-      ${
-        unobClass
+    <td class="${unobClass ? "unob" : isDone ? "done" : item.current === 0 ? "none" : "mid"
+        }">
+      ${unobClass
           ? "UNOBTAINABLE"
           : isDone
             ? "COMPLETE"
             : item.current === 0
               ? "NOT STARTED"
               : "RESEARCHING"
-      }
+        }
+    </td>
+    <td>
+      <input type="checkbox" class="item-check" data-id="${item.id}" ${isDone ? "checked" : ""}>
     </td>
   `;
 
@@ -601,6 +639,20 @@ function renderUI() {
   savePreferences();
 }
 
+document.querySelectorAll(".item-check").forEach((checkbox) => {
+  checkbox.addEventListener("change", (e) => {
+    const itemId = e.target.dataset.id;
+    const isChecked = e.target.checked;
+    // Handle checkbox change (e.g., update item status)
+    const item = MASTER_LIST.find((i) => i.id === itemId);
+    if (item) {
+      item.current = isChecked ? item.required : 0;
+      console.log("Updated item:", item);
+      renderUI();
+    }
+  });
+});
+
 // --- Initialization & Listeners ---
 document.getElementById("themeToggle").addEventListener("click", () => {
   const currentTheme = document.documentElement.dataset.theme;
@@ -613,6 +665,7 @@ window.addEventListener("DOMContentLoaded", () => {
   document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
   loadDatabase();
 });
+
 // Only attach to buttons that have a data-sort attribute
 document.querySelectorAll(".btn[data-sort]").forEach((btn) => {
   btn.onclick = (e) => {
@@ -641,11 +694,13 @@ document.getElementById("search").oninput = () => {
     renderUI();
   }, 200);
 };
+
 document.getElementById("pageSize").onchange = () => {
   CURRENT_PAGE = 1;
   savePreferences();
   renderUI();
 };
+
 const tagModal = document.getElementById("tagModal");
 document.getElementById("tagFilterBtn").onclick = () => {
   renderTagModal();
@@ -653,6 +708,7 @@ document.getElementById("tagFilterBtn").onclick = () => {
   showListLoadingOverlay("Loading tags...");
   setTimeout(() => hideListLoadingOverlay(), 300);
 };
+
 function renderTagModal() {
   const container = document.getElementById("tagContainer");
   container.innerHTML = "";

@@ -1,0 +1,85 @@
+{
+    "0": {
+        "category": "Weapons",
+        "tags": [
+            "Melee Weapons",
+            "Ranged Weapons",
+            "Magic Weapons",
+            "Summon Weapons",
+            "Other Weapons"
+        ]
+    },
+    "1": {
+        "category": "Tools",
+        "tags": [
+            "Pickaxes/Drills",
+            "Axes/Chainsaws",
+            "Hammers",
+            "Wiring",
+            "Painting",
+            "Fishing Poles",
+            "Other Tools"
+        ]
+    },
+    "2": {
+        "category": "Equipment",
+        "tags": [
+            "Armor",
+            "Accessories",
+            "Vanity",
+            "Dyes",
+            "Pets",
+            "Light Pets",
+            "Minecarts",
+            "Mounts",
+            "Hooks"
+        ]
+    },
+    "3": {
+        "category": "Consumables",
+        "tags": [
+            "Ammunition",
+            "Potions",
+            "Explosive Consumables",
+            "Consumable Weapons",
+            "Consumable Tools",
+            "Summoning Items",
+            "Permanent Boosters",
+            "Critters",
+            "Fish",
+            "Grab Bags",
+            "Seeds",
+            "Other"
+        ]
+    },
+    "4": {
+        "category": "Furniture",
+        "tags": [
+            "Crafting Stations",
+            "Light Sources",
+            "Storage Items",
+            "Furniture Sets",
+            "Paintings",
+            "Banners",
+            "Statues",
+            "Music Boxes",
+            "Other Items"
+        ]
+    },
+    "5": {
+        "category": "Tiles",
+        "tags": [
+            "Blocks",
+            "Walls"
+        ]
+    },
+    "6": {
+        "category": "Misc",
+        "tags": [
+            "Materials",
+            "Drops",
+            "Shimmering",
+            "Novelty Items"
+        ]
+    }
+}
