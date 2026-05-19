@@ -5,6 +5,9 @@ FROM php:8.5-apache
 RUN apt-get update \
     && apt-get install -y \
         libpng-dev \
+        libjpeg62-turbo-dev \
+        libwebp-dev \
+        libfreetype6-dev \
         libonig-dev \
         libxml2-dev \
         zip \
@@ -13,7 +16,15 @@ RUN apt-get update \
         libzip-dev \
         mariadb-client \
         nano \
-    && docker-php-ext-install pdo pdo_mysql mysqli
+    && docker-php-ext-configure gd \
+        --with-jpeg \
+        --with-webp \
+        --with-freetype \
+    && docker-php-ext-install \
+        gd \
+        pdo \
+        pdo_mysql \
+        mysqli
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
@@ -29,9 +40,12 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
 # Set Apache DocumentRoot to /var/www/html/public
-RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
+RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' \
+    /etc/apache2/sites-available/000-default.conf
+
 # Allow .htaccess overrides
-RUN sed -i '/<Directory \/var\/www\/html>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+RUN sed -i '/<Directory \/var\/www\/html>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' \
+    /etc/apache2/apache2.conf
 
 # Copy custom Apache configs (Alias for icons)
 COPY docker/icons-alias.conf /etc/apache2/conf-available/icons-alias.conf

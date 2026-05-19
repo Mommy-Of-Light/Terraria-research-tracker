@@ -299,7 +299,6 @@ function renderPaginationControls(totalItems) {
   const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE) || 1;
   const containers = [
     document.getElementById("paginationTop"),
-    document.getElementById("paginationBottom"),
   ];
 
   const html = `

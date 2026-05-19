@@ -253,7 +253,7 @@ class ChatController extends BaseController
         $chatId = (int) $args['id'];
 
         $stmt = Database::connection()->prepare("
-        DELETE FROM Messages 
+        DELETE FROM Message
         WHERE idMessage = :idMessage
     ");
         $stmt->execute([

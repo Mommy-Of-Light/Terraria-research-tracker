@@ -170,8 +170,6 @@
             </div>
 
         </div>
-        <div id="paginationBottom" class="pagination-container"></div>
-
     </div>
 
     <script src="database.js"></script>

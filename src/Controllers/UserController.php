@@ -461,9 +461,6 @@ class UserController extends BaseController
                 imagewebp($dstImage, $filePath);
                 break;
         }
-
-        imagedestroy($srcImage);
-        imagedestroy($dstImage);
     }
 
     /**
