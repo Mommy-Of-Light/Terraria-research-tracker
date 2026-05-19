@@ -169,7 +169,8 @@
             <div id="gridView" class="grid-scroll-wrapper" style="display: none;">
                 <ul id="itemGrid" class="item-list grid"></ul>
             </div>
-
+            <button class="btn" id="restoreAllFilters">Clear All Filters</button>
+            <button class="btn" id="clearAllFilters">Clear All Research</button>
         </div>
     </div>
 

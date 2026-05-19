@@ -600,12 +600,14 @@ function renderUI() {
               ? "none"
               : "mid";
 
+        // Added checkbox so grid supports toggling too
         return `
         <div class="item-card ${statusClass} ${unobClass}">
+            <input type="checkbox" class="item-check card-check" data-id="${item.id}" ${isDone ? "checked" : ""} title="Mark complete">
             <spam>${item.id}</spam>
             <a href="${item.wiki}" target="_blank" class="wiki-link">
-  <img src="${item.icon}" onerror="this.src='/assets/icons/Default.png';">
-                <div class="item-name">${item.display}</div>
+              <img src="${item.icon}" onerror="this.src='/assets/icons/Default.png';">
+              <div class="item-name">${item.display}</div>
             </a>
             <div class="mini-prog">${unobClass ? "Unobtainable" : item.current + "/" + item.required}</div>
         </div>`;
@@ -639,18 +641,49 @@ function renderUI() {
   savePreferences();
 }
 
-document.querySelectorAll(".item-check").forEach((checkbox) => {
-  checkbox.addEventListener("change", (e) => {
-    const itemId = e.target.dataset.id;
-    const isChecked = e.target.checked;
-    // Handle checkbox change (e.g., update item status)
-    const item = MASTER_LIST.find((i) => i.id === itemId);
-    if (item) {
-      item.current = isChecked ? item.required : 0;
-      console.log("Updated item:", item);
-      renderUI();
-    }
+
+// Persist research state (internalName -> current)
+function saveResearchState() {
+  const dataToSave = {};
+  MASTER_LIST.forEach((item) => {
+    if (item.current > 0) dataToSave[item.internal] = item.current;
   });
+  localStorage.setItem("terraria_research_data", JSON.stringify(dataToSave));
+}
+
+function restoreSearchState() {
+  const savedData = localStorage.getItem("terraria_research_data");
+  if (savedData) {
+    const parsedData = JSON.parse(savedData);
+    MASTER_LIST.forEach((item) => {
+      if (parsedData[item.internal]) {
+        item.current = parsedData[item.internal];
+      }
+    });
+  }
+}
+
+function clearResearchState() {
+  MASTER_LIST.forEach((item) => {
+    item.current = 0;
+  });
+}
+
+// Event delegation so checkbox handlers survive re-renders
+document.addEventListener("change", (e) => {
+  const target = e.target;
+  if (!target.classList.contains("item-check")) return;
+  const id = parseInt(target.dataset.id, 10);
+  if (isNaN(id)) return;
+
+  const item = MASTER_LIST.find((i) => i.id === id);
+  if (!item) return;
+
+  // Toggle: checked => complete, unchecked => reset to 0
+  item.current = target.checked ? item.required : 0;
+  saveResearchState();
+  // Re-render to update UI/stats (keeps pagination & view)
+  renderUI();
 });
 
 // --- Initialization & Listeners ---
@@ -786,6 +819,18 @@ document.getElementById("closeModal").onclick = () =>
 document.getElementById("clearTags").onclick = () => {
   ACTIVE_TAGS = [];
   renderTagModal();
+  renderUI();
+};
+
+document.getElementById("restoreAllFilters").onclick = () => {
+  ACTIVE_TAGS = [];
+  restoreSearchState();
+  renderUI();
+};
+
+document.getElementById("clearAllFilters").onclick = () => {
+  ACTIVE_TAGS = [];
+  clearResearchState();
   renderUI();
 };
 
