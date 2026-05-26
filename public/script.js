@@ -236,6 +236,7 @@ function loadDatabase() {
     if (cachedData) {
       const savedCounts = JSON.parse(cachedData);
       MASTER_LIST.forEach((item) => {
+        if (savedCounts === undefined || savedCounts === null) return;
         if (savedCounts[item.internal] !== undefined) {
           item.current = savedCounts[item.internal];
         }
@@ -379,16 +380,18 @@ function preloadNearbyPages(displayList) {
 
   for (let page = startPage; page <= endPage; page++) {
     const start = (page - 1) * ITEMS_PER_PAGE;
-    const pageItems = displayList.slice(start, start + ITEMS_PER_PAGE);
+    const end = start + ITEMS_PER_PAGE;
 
-    pageItems.forEach((item) => {
-      if (preloaded.has(item.icon)) return;
+    const pageItems = displayList.slice(start, end);
+
+    for (const item of pageItems) {
+      if (!item.icon || preloaded.has(item.icon)) continue;
 
       const img = new Image();
       img.src = item.icon;
 
       preloaded.add(item.icon);
-    });
+    }
   }
 }
 
@@ -603,13 +606,13 @@ function renderUI() {
         // Added checkbox so grid supports toggling too
         return `
         <div class="item-card ${statusClass} ${unobClass}">
-            <input type="checkbox" class="item-check card-check" data-id="${item.id}" ${isDone ? "checked" : ""} title="Mark complete">
             <spam>${item.id}</spam>
             <a href="${item.wiki}" target="_blank" class="wiki-link">
               <img src="${item.icon}" onerror="this.src='/assets/icons/Default.png';">
               <div class="item-name">${item.display}</div>
             </a>
             <div class="mini-prog">${unobClass ? "Unobtainable" : item.current + "/" + item.required}</div>
+            <input type="checkbox" class="item-check card-check" data-id="${item.id}" ${isDone ? "checked" : ""} title="Mark complete">
         </div>`;
       })
       .join("");
@@ -651,7 +654,16 @@ function saveResearchState() {
   localStorage.setItem("terraria_research_data", JSON.stringify(dataToSave));
 }
 
-function restoreSearchState() {
+function restoreResearchState() {
+  if (localStorage.getItem("terraria_research_data") === null){
+    if (localStorage.getItem("terraria_research_data_backup") !== null) {
+      localStorage.setItem("terraria_research_data", localStorage.getItem("terraria_research_data_backup"));
+      localStorage.removeItem("terraria_research_data_backup");
+    } else {
+      alert("No research data found to restore.");
+      return; // No data to restore
+    }
+  }
   const savedData = localStorage.getItem("terraria_research_data");
   if (savedData) {
     const parsedData = JSON.parse(savedData);
@@ -667,6 +679,7 @@ function clearResearchState() {
   MASTER_LIST.forEach((item) => {
     item.current = 0;
   });
+  localStorage.removeItem("terraria_research_data");
 }
 
 // Event delegation so checkbox handlers survive re-renders
@@ -822,17 +835,24 @@ document.getElementById("clearTags").onclick = () => {
   renderUI();
 };
 
-document.getElementById("restoreAllFilters").onclick = () => {
+document.getElementById("restoreAllResearch").onclick = () => {
   ACTIVE_TAGS = [];
-  restoreSearchState();
+  restoreResearchState();
   renderUI();
 };
 
-document.getElementById("clearAllFilters").onclick = () => {
+document.getElementById("clearAllResearch").onclick = () => {
   ACTIVE_TAGS = [];
   clearResearchState();
   renderUI();
 };
+
+document.getElementById("resetSearch").onclick = () => {
+  let researchData = localStorage.getItem("terraria_research_data");
+  localStorage.setItem("terraria_research_data_backup", researchData);
+  clearResearchState();
+  renderUI();
+}
 
 // Global click listener for category headers
 document.addEventListener("click", (e) => {

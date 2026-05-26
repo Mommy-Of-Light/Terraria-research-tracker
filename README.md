@@ -4,7 +4,7 @@ This project is ment do make easy to trace the progression of a `Journey Mode Pl
 
 ---
 
-## Built With
+## 🛠️ Built With
 
 - PHP (>= 8.5)
 - Slim Framework
@@ -22,7 +22,16 @@ This project is ment do make easy to trace the progression of a `Journey Mode Pl
 ![Demo](https://img.shields.io/badge/Test-Missing-red)
 ![Demo](https://img.shields.io/badge/Git-Back-darkgreen)
 
-## Installation
+## 🚀 Features
+
+- User authentication (register, login, logout)
+- Profile management (change profile picture, delete account)
+- Chat system (create chat, send messages, delete messages)
+- File management (upload .plr files, delete .plr files)
+- Responsive design for mobile and desktop
+- Error handling and validation
+
+## 📦 Installation
 
 Clone the repository:
 
@@ -39,44 +48,45 @@ Install dependencies:
 composer install
 ```
 
-**Important note**: Make sure to unzip the public/img.zip file in the public/img/, but make sure to not have a img directory in the path to not have duplicate like public/img/img/.
-This step is required to have all the necessary images for the application.
+**Important note**: Make sure to unzip the public/.config/icons.zip file in the public/icons/, but make sure to not have a icons directory in the path to not have duplicate like public/icons/icons/.
+This step is required to have all the necessary assets for the application.
 
 ---
 
-## Configuration
+## ⚙️ Configuration
 
-### Put the database in `sql/chat_V3.sql` in your mariadb database server
-
-### Copy `database.sample.php` to `database.php` and update values:
+### Copy the .env.example to .env and update values:
 
 ```bash
-cp config/database.sample.php config/database.php
+cp .env.example .env
 ```
 
-### Set your environment variables (DB, API keys, etc).
+### Update the values in the .env file:
 
-```php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'chat_V2');
-define('DB_USER', ''); // <--- here, your mariadb user
-define('DB_PASSWORD', ''); // <--- here, your mariadb password
-define('DB_CHARSET', 'utf8mb4');
+```env
+APACHE_RUN_USER=www-data # do not change
+APACHE_RUN_GROUP=www-data # do not change
+
+DB_HOST=db # do not change
+DB_PORT=3306 # do not change
+DB_NAME=chat_V3 # do not change
+DB_USER=<PHP_MY_ADMIN_USER>
+DB_PASSWORD=<PHP_MY_ADMIN_PASSWORD>
+DB_CHARSET=utf8mb4 # do not change
+
+MYSQL_ROOT_PASSWORD=<MYSQL_ROOT_PASSWORD_OR_WHATEVER_YOU_WANT_TO_PUT_FOR_ROOT_USER>
+MYSQL_DATABASE=<MUST_BE_THE_SAME_AS_DB_NAME>
+MYSQL_USER=<MUST_BE_THE_SAME_AS_DB_USER>
+MYSQL_PASSWORD=<MUST_BE_THE_SAME_AS_DB_PASSWORD>
 ```
 
 ---
 
-## Run the Application
+## 💻 Run the Application
 
-Using PHP built-in server:
+### Launch the docker for simple access
 
-```bash
-composer launch-server
-```
-
-## Launch the docker for simple access
-
-Or with Docker (if applicable):
+With Docker:
 
 ```bash
 docker-compose up -d
@@ -86,7 +96,7 @@ docker-compose up -d
 
 ---
 
-## Routes
+## 🔌 Routes
 
 ### Main entry point 
 
@@ -140,7 +150,7 @@ docker-compose up -d
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 Terraria-progress-tracker-&-chat/
@@ -205,7 +215,7 @@ Terraria-progress-tracker-&-chat/
 
 ---
 
-## Running Tests
+## 🧪 Running Tests
 
 **Skip this part because there aren't tests for now**
 
@@ -215,13 +225,13 @@ vendor/bin/phpunit
 
 ---
 
-## Security
+## 🔒 Security
 
 If you discover a security vulnerability, please send an email instead of opening an issue.
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repo
 2. Create your feature branch (`git checkout -b feature/foo`)
@@ -231,20 +241,20 @@ If you discover a security vulnerability, please send an email instead of openin
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License.
 
 ---
 
-## Acknowledgements
+## 💝 Acknowledgements
 
 * Slim Framework
 * PHP Community
 
 ---
 
-## Author
+## 👤 Author
 
 **Name:** Mommy-Of-Light
 **E-mail:** empress.mommy.of.light@gmail.com
