@@ -154,63 +154,73 @@ docker-compose up -d
 
 ```
 Terraria-progress-tracker-&-chat/
-┣━╸config/
-┃  ┣━╸database.sample.php
-┃  ┗━╸database.php
-┣━╸img/*
-┣━╸public/
-┃  ┣━╸upload/*
-┃  ┣━╸users/*
-┃  ┣━╸.htaccess
-┃  ┣━╸category_tree.json
-┃  ┣━╸index.php
-┃  ┣━╸item.json
-┃  ┣━╸items_with_urls.json
-┃  ┣━╸progress_temp.json
-┃  ┗━╸putCategoryToData.py
-┣━╸routes/
-┃  ┗━╸web.php
-┣━╸sql/
-┃  ┣━╸chat_V1.sql
-┃  ┗━╸chat_V2.sql
-┣━╸src/
-┃  ┣━╸Controller/
-┃  ┃  ┣━╸AuthController.php
-┃  ┃  ┣━╸BaseController.php
-┃  ┃  ┣━╸ChatController.php
-┃  ┃  ┣━╸HomeController.php
-┃  ┃  ┗━╸UserController.php
-┃  ┣━╸Core/
-┃  ┃  ┗━╸Database.php
-┃  ┗━╸Model
-┃     ┣━╸Chat.php
-┃     ┣━╸Message.php
-┃     ┗━╸User.php
-┣━╸vendor/*
-┣━╸views/
-┃  ┣━╸chat/
-┃  ┃  ┣━╸chat.php
-┃  ┃  ┣━╸list.php
-┃  ┃  ┗━╸new.php
-┃  ┣━╸errors/
-┃  ┃  ┣━╸400.php
-┃  ┃  ┣━╸404.php
-┃  ┃  ┗━╸500.php
-┃  ┣━╸home/
-┃  ┃  ┗━╸home.php
-┃  ┣━╸login/
-┃  ┃  ┣━╸login.php
-┃  ┃  ┗━╸register.php
-┃  ┣━╸user/
-┃  ┃  ┣━╸playerFiles.php
-┃  ┃  ┗━╸profile.php
-┃  ┣━╸layout.php
-┃  ┗━╸menu.php
-┣━╸composer.json
-┣━╸composer.lock
-┣━╸Licence
-┣━╸README
-┗━╸Terraria Research Tracker 1.4.5.html
+|-- config/
+|  |-- database.php
+|  +-- database.sample.php
+|-- docker/*
+|-- public/
+|  |-- .config/*
+|  |-- icons/*
+|  |-- uploads/
+|  |  +-- testimage.png
+|  |-- user/
+|  |  +-- Creator-6a155ceec0048/
+|  |     +-- player_1779784965.plr
+|  |-- .htaccess
+|  |-- index.php
+|  |-- items.json
+|  |-- script.js
+|  |-- style.css
+|  +-- tags.json
+|-- routes/
+|  +-- web.php
+|-- sql/
+|  |-- chat_V1.sql
+|  |-- chat_V2.sql
+|  +-- chat_V3.sql
+|-- src/
+|  |-- Controllers/
+|  |  |-- AuthController.php
+|  |  |-- BaseController.php
+|  |  |-- ChatController.php
+|  |  |-- HomeController.php
+|  |  +-- UserController.php
+|  |-- Core/
+|  |  +-- Database.php
+|  +-- Model/
+|     |-- Chat.php
+|     |-- Message.php
+|     +-- User.php
+|-- vendor/*
+|-- views/
+|  |-- chat/
+|  |  |-- chat.php
+|  |  |-- list.php
+|  |  +-- new.php
+|  |-- errors/
+|  |  |-- 400.php
+|  |  |-- 404.php
+|  |  +-- 500.php
+|  |-- home/
+|  |  +-- home.php
+|  |-- login/
+|  |  |-- login.php
+|  |  +-- register.php
+|  |-- user/
+|  |  |-- playerFiles.php
+|  |  +-- profile.php
+|  |-- layout.php
+|  +-- menu.php
+|-- .env
+|-- .gitignore
+|-- composer.json
+|-- composer.lock
+|-- docker-compose.yml
+|-- Dockerfile
+|-- env.example
+|-- Licence
+|-- README.md
++-- restartDocker.sh
 ```
 
 ---
